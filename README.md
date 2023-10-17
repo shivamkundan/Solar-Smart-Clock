@@ -3,4 +3,4 @@
 
 ## About
 
-Shows countdown to civil-twilight, sunrise, and sunset times based on stored unix timestamps. Uses an external real-time clock for WiFi-independent operation.
+Shows countdown to civil-twilight, solar-noon, sunrise, and sunset times based on stored unix timestamps. Uses an external real-time clock for WiFi-independent operation.
