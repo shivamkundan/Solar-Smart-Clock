@@ -44,7 +44,6 @@ String get_day_name(uint8_t dayOfWeek){
 
 #include <DS3232RTC.h>      // https://github.com/JChristensen/DS3232RTC
 
-
 DS3232RTC myRTC;
 
 // These vars save current time vals
@@ -280,7 +279,6 @@ String get_readable_time(time_t inTime){
 		hour_12hr=(te.Hour==12 ? 12 : te.Hour-12);
 	}
 	char buf[80];
-	// sprintf(buf,"%d:%02d:%02d",hour_12hr,te.Minute,te.Second);
 	sprintf(buf,"%d:%02d",hour_12hr,te.Minute);
 	outstr=buf+am_pm;
 
@@ -325,14 +323,6 @@ String get_readable_day(time_t inTime)
 
 	int day=my_dayOfWeek(te.Year+1970,te.Month,te.Day);
 	String dayname=get_day_name(day);
-
-	// // Get day name
-	// uint16_t weekday_num=te.Day%8;
-	// if (weekday_num==0)
-	// 	weekday_num+=1;
-
-	// String dayname= dayShortStr(weekday_num);
-	// // Serial.println("weekday: "+String(dayname));
 
 	return (dayname);
 }
