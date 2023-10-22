@@ -1,4 +1,7 @@
 // See: https://www.timeanddate.com/sun/usa/carbondale
+#ifndef TIME_STUFF_H
+	#define TIME_STUFF_H
+#endif
 
 #define LEAP_YEAR(Y)     ( (Y>0) && !(Y%4) && ( (Y%100) || !(Y%400) ))     // from time-lib
 

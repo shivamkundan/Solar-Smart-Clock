@@ -1,5 +1,15 @@
-#include <Shivam_TXT.h>
-#include "types.h"
+#ifndef STRING_DEFS_H
+	#define STRING_DEFS_H
+#endif
+
+#ifndef Shivam_TXT_H
+	#include <Shivam_TXT.h>
+#endif
+
+#ifndef TYPES_H
+	#include "types.h"
+#endif
+
 // Init TXT objects
 Shivam_TXT timestr = Shivam_TXT(185,62,MAIN_TIME_FONT,1,TXT_COLOR,BG_COLOR);
 Shivam_TXT sec_str = Shivam_TXT(390,40,SECOND_FONT,1,TXT_COLOR,BG_COLOR);

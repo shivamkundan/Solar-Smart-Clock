@@ -1,9 +1,14 @@
+// Fonts
+// SEE: https://rop.nl/truetype2gfx/
+
+#ifndef TYPES_H
+	#define TYPES_H
+#endif
+
 #ifndef Adafruit_GFX_H
 	#include "Adafruit_GFX.h"
 #endif
 
-// Fonts
-// SEE: https://rop.nl/truetype2gfx/
 
 #include <Fonts/FreeSerifItalic24pt7b.h>
 
@@ -43,7 +48,7 @@
 #define MIN_LUX 2
 #define MAX_LUX 50
 #define MIN_LIGHT_DIFF 1
-uint16_t PWM_LVL = MAX_PWM;
+uint16_t PWM_LVL = MIN_PWM;
 
 #define SCR_ROT 1
 

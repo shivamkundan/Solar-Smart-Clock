@@ -1,5 +1,16 @@
-#include "TouchScreen.h"
-#include <Shivam_PicoW_TFT.h>
+
+#ifndef TouchScreen_H
+	#include "TouchScreen.h"
+#endif
+
+#ifndef Shivam_PicoW_TFT_H
+	#include <Shivam_PicoW_TFT.h>
+#endif
+
+#ifndef TYPES_H
+	#include "types.h"
+#endif
+
 
 // Touch pins
 #define YP A0  // must be an analog pin, use "An" notation!
@@ -11,10 +22,12 @@
 
 #define TOUCH_PRESSURE_THRESHOLD 800
 
+#define TS_RESISTANCE 290  // Measured by shivam
+
 // For better pressure precision, we need to know the resistance
 // between X+ and X- Use any multimeter to read it    <<<<<< TO DO
 // For the one we're using, its 300 ohms across the X plate
-TouchScreen ts = TouchScreen(XP, YP, XM, YM, 295);
+TouchScreen ts = TouchScreen(XP, YP, XM, YM, TS_RESISTANCE);
 // ts.pressureThreshhold=300;
 
 // Stores the adjusted x and y coords
